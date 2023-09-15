@@ -14,7 +14,7 @@ const scrapeWorkMetadataFromHVDB = id => new Promise((resolve, reject) => {
   } else {
     rjcode = (`000000${id}`).slice(-6);
   }
-  const url = `https://hvdb.me/Dashboard/WorkDetails/${id}`;
+  const url = `https://hvdb.me/Dashboard/Details/${id}`;
 
   console.log(`[RJ${rjcode}] 从 HVDB 抓取元数据...`);
   axios.retryGet(url, { retry: {} })
